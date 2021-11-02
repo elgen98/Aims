@@ -18,12 +18,16 @@ function createList() {
 
   for (let i = 0; i < aimList.length; i++) {
     let ul = document.createElement("ul");
+    let ul2 = document.createElement("ul");
     let li = document.createElement("li");
+    let li2 = document.createElement("li");
 
-    li.innerHTML =
-      aimList[i].title + " |" + "Description: " + aimList[i].description;
+    li.innerHTML = aimList[i].title;
 
+    li2.innerHTML = aimList[i].description;
     ul.appendChild(li);
+    li.appendChild(ul2);
+    ul2.appendChild(li2);
     listContainer.appendChild(ul);
   }
   document.body.appendChild(listContainer);
