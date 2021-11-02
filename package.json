@@ -17,5 +17,13 @@
     "To-do"
   ],
   "author": "Elliot Blomqvist",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elgen98/Aims.git"
+  },
+  "bugs": {
+    "url": "https://github.com/elgen98/Aims/issues"
+  },
+  "homepage": "https://github.com/elgen98/Aims#readme"
 }
