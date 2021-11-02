@@ -1,0 +1,21 @@
+{
+  "name": "js_uppgift_1",
+  "version": "1.0.0",
+  "description": "Inlämningsuppgift 1 för grundkursen i Javascript",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.43.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "To-do"
+  ],
+  "author": "Elliot Blomqvist",
+  "license": "ISC"
+}
