@@ -7,6 +7,10 @@ class Aims {
 
 window.onload = function () {
   createList();
+  document.getElementById("myBtn").addEventListener("click", showModal);
+  document
+    .getElementsByClassName("close")[0]
+    .addEventListener("click", deleteModal);
 };
 let aim1 = new Aims("Träna", "Benböj");
 let aim2 = new Aims("Sova", "7 timmar");
@@ -32,3 +36,21 @@ function createList() {
   }
   document.body.appendChild(listContainer);
 }
+
+let modal = document.getElementById("myModal");
+
+//let btn = document.getElementById("myBtn");
+
+function showModal() {
+  modal.style.display = "block";
+}
+
+function deleteModal() {
+  modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};

@@ -1,1 +1,14 @@
 @use "modal";
+
+body,
+html {
+  height: 100%;
+  background-color: lightgrey;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}

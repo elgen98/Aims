@@ -4,14 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="JS/main.js"></script>
+    <!--<script src="JS/main.js"></script>-->
+    <link rel="stylesheet" href="CSS/main.css" />
     <title>Aims: routine makes perfect</title>
   </head>
   <body>
     <header></header>
     <main id="aims">
-      <img src="assets/LogoSample_ByTailorBrands.jpg" alt="Aims Logo" />
+      <img src="assets/output-onlinepngtools.png" alt="Aims Logo" />
+      <button id="myBtn">Skapa nytt inlägg</button>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>New Aim</h2>
+          </div>
+          <div class="modal-body">
+            <form class="form">
+              <label>The aim</label>
+              <input type="text" name="" id="" />
+              <label>Describe the aim (if necessery)</label>
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="cancelBtn">Avbryt</button>
+            <button class="approveBtn" type="submit">Submit</button>
+          </div>
+        </div>
+      </div>
     </main>
     <footer></footer>
+
+    <script src="JS/main.js"></script>
   </body>
 </html>
