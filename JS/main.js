@@ -19,6 +19,7 @@ let aim3 = new Aims("Äta frukost", "Havregröt");
 function createList() {
   let aimList = [aim1, aim2, aim3];
   let listContainer = document.createElement("div");
+  listContainer.className = "mainAim";
 
   for (let i = 0; i < aimList.length; i++) {
     let ul = document.createElement("ul");
@@ -34,7 +35,7 @@ function createList() {
     ul2.appendChild(li2);
     listContainer.appendChild(ul);
   }
-  document.body.appendChild(listContainer);
+  document.getElementById("aims").appendChild(listContainer);
 }
 
 let modal = document.getElementById("myModal");

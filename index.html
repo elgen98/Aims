@@ -9,32 +9,36 @@
     <title>Aims: routine makes perfect</title>
   </head>
   <body>
-    <header></header>
-    <main id="aims">
-      <img src="assets/output-onlinepngtools.png" alt="Aims Logo" />
-      <button id="myBtn">Skapa nytt inlägg</button>
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2>New Aim</h2>
-          </div>
-          <div class="modal-body">
-            <form class="form">
-              <label>The aim</label>
-              <input type="text" name="" id="" />
-              <label>Describe the aim (if necessery)</label>
-              <textarea name="" id="" cols="30" rows="10"></textarea>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button class="cancelBtn">Avbryt</button>
-            <button class="approveBtn" type="submit">Submit</button>
+    <div class="gridContainer">
+      <header></header>
+      <main id="aims" class="mainContent">
+        <img src="assets/output-onlinepngtools.png" alt="Aims Logo" />
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>New Aim</h2>
+            </div>
+            <div class="modal-body">
+              <form class="form">
+                <label>The aim</label>
+                <input type="text" name="" id="" />
+                <label>Describe the aim (if necessery)</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button class="cancelBtn">Avbryt</button>
+              <button class="approveBtn" type="submit">Submit</button>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
-    <footer></footer>
+      </main>
+      <footer class="footer">
+        <p>//stats here</p>
+      </footer>
+      <button id="myBtn">Skapa nytt inlägg</button>
+    </div>
 
     <script src="JS/main.js"></script>
   </body>
