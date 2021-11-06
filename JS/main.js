@@ -18,9 +18,10 @@ let aimList = [];
 const title = document.getElementById("titleOfAim");
 const description = document.getElementById("descriptionOfAim");
 let activeAim = true;
+document.getElementById("mainAims").innerHTML = "<h3>Dina Aims</h3>";
 
 function createListItem() {
-  document.getElementById("mainAims").innerHTML = " ";
+  document.getElementById("mainAims").innerHTML = "<h3>Dina Aims</h3>";
 
   for (let i = 0; i < aimList.length; i++) {
     if (aimList[i].activeAim == true) {
@@ -28,7 +29,8 @@ function createListItem() {
       let li = document.createElement("li");
 
       let button = document.createElement("button");
-      button.innerHTML = "delete";
+      button.className = "checkBtn";
+      button.innerHTML = '<i class="fas fa-trash-alt"></i>';
       button.addEventListener("click", () => {
         remove(i);
       });

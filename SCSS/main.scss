@@ -18,6 +18,10 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  .checkBtn {
+    background-color: red;
+    border-radius: 12px;
+  }
 }
 img {
   width: 200px;

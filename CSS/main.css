@@ -119,6 +119,10 @@ html {
   flex-direction: column;
   align-items: center;
 }
+#mainAims .checkBtn {
+  background-color: red;
+  border-radius: 12px;
+}
 
 img {
   width: 200px;
