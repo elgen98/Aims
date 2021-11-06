@@ -69,30 +69,7 @@ function remove(position) {
   createListItem();
 }
 
-/*function createList() {
-  let listContainer = document.createElement("div");
-  listContainer.className = "mainAim";
-
-  for (let i = 0; i < aimList.length; i++) {
-    let ul = document.createElement("ul");
-    let ul2 = document.createElement("ul");
-    let li = document.createElement("li");
-    let li2 = document.createElement("li");
-
-    li.innerHTML = aimList[i].title;
-
-    li2.innerHTML = aimList[i].description;
-    ul.appendChild(li);
-    li.appendChild(ul2);
-    ul2.appendChild(li2);
-    listContainer.appendChild(ul);
-  }
-  document.getElementById("aims").appendChild(listContainer);
-}*/
-
 let modal = document.getElementById("myModal");
-
-//let btn = document.getElementById("myBtn");
 
 function showModal() {
   modal.style.display = "block";
