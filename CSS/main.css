@@ -81,7 +81,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
   grid-column-start: line2;
   grid-column-end: line3;
   grid-row-start: firstrow;
@@ -109,14 +108,14 @@ html {
   background-color: lightgrey;
 }
 
-.mainAim {
-  width: 80vw;
+#mainAims {
+  width: 75vw;
   background-color: yellowgreen;
   border-radius: 15px;
   padding-left: 15px;
   font-size: 1.25rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
 }
 

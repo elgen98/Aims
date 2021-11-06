@@ -6,7 +6,6 @@
 }*/
 
 window.onload = function () {
-  //createList();
   document.getElementById("myBtn").addEventListener("click", showModal);
   document
     .getElementsByClassName("close")[0]
@@ -20,28 +19,40 @@ const title = document.getElementById("titleOfAim");
 const description = document.getElementById("descriptionOfAim");
 
 function createListItem() {
-  let last = aimList[aimList.length - 1];
-  let listContainer = document.createElement("div");
-  listContainer.className = "mainAim";
+  document.getElementById("mainAims").innerHTML = " ";
 
-  let ul = document.createElement("ul");
-  let ul2 = document.createElement("ul");
-  let li = document.createElement("li");
-  let li2 = document.createElement("li");
+  for (let i = 0; i < aimList.length; i++) {
+    let ul = document.createElement("ul");
+    let li = document.createElement("li");
 
-  let check = document.createElement("input");
-  check.setAttribute("type", "checkbox");
+    let button = document.createElement("button");
+    button.innerHTML = "delete";
+    button.addEventListener("click", () => {
+      remove(i);
+    });
 
-  li.innerHTML = last.title;
-  li2.innerHTML = last.description;
+    if (aimList[i].description.length > 0) {
+      let ul2 = document.createElement("ul");
+      let li2 = document.createElement("li");
 
-  ul.appendChild(li);
-  listContainer.appendChild(check);
-  li.appendChild(ul2);
-  ul2.appendChild(li2);
-  listContainer.appendChild(ul);
+      li.innerHTML = aimList[i].title;
+      li2.innerHTML = aimList[i].description;
 
-  document.getElementById("aims").appendChild(listContainer);
+      li.appendChild(button);
+
+      ul.appendChild(li);
+      li.appendChild(ul2);
+      ul2.appendChild(li2);
+      document.getElementById("mainAims").appendChild(ul);
+    } else {
+      li.innerHTML = aimList[i].title;
+
+      li.appendChild(button);
+
+      ul.appendChild(li);
+      document.getElementById("mainAims").appendChild(ul);
+    }
+  }
 }
 
 function addObject() {
@@ -55,16 +66,7 @@ function addObject() {
 
 function remove(position) {
   aimList.splice(position, 1);
-}
-
-for (let i = 0; i < aimList.length; i++) {
-  let button = document.createElement("button");
-
-  button.addEventListener("click", () => {
-    remove(i);
-  });
-
-  button.appendChild(aimList[i]);
+  createListItem();
 }
 
 /*function createList() {
