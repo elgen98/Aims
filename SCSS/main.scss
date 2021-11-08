@@ -1,5 +1,6 @@
 @use "modal";
 @use "layout";
+@use "slider";
 
 body,
 html {
@@ -8,21 +9,16 @@ html {
   background-color: lightgrey;
 }
 
-#mainAims {
-  width: 75vw;
-  height: 500px;
-  background-color: yellowgreen;
-  border-radius: 15px;
-  padding-left: 15px;
-  font-size: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .checkBtn {
-    background-color: red;
-    border-radius: 12px;
-  }
+.checkBtn {
+  background-color: red;
+  border-radius: 50px;
 }
+
+.uncheckBtn {
+  background-color: green;
+  border-radius: 50px;
+}
+
 img {
   width: 200px;
 }
