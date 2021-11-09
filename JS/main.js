@@ -104,6 +104,8 @@ function addObject() {
   });
   console.log(aimList);
   createListItem();
+  document.getElementById("titleOfAim").value = " ";
+  document.getElementById("descriptionOfAim").value = " ";
 }
 
 function remove(position) {
