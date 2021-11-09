@@ -24,9 +24,16 @@
   grid-row-end: rowEnd;
 }
 
-button {
+#createBtn {
   grid-column-start: line3;
   grid-column-end: end;
   grid-row-start: rowLine3;
   grid-row-end: rowEnd;
+}
+
+#sortBtn {
+  grid-column-start: first;
+  grid-column-end: line2;
+  grid-row-start: firstrow;
+  grid-row-end: rowLine2;
 }

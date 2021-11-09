@@ -6,11 +6,12 @@
 }*/
 
 window.onload = function () {
-  document.getElementById("myBtn").addEventListener("click", showModal);
+  document.getElementById("createBtn").addEventListener("click", showModal);
   document
     .getElementsByClassName("close")[0]
     .addEventListener("click", deleteModal);
   document.getElementById("approveBtn").addEventListener("click", addObject);
+  document.getElementById("sortBtn").addEventListener("click", sortList);
 };
 
 let aimList = [];
@@ -104,8 +105,8 @@ function addObject() {
   });
   console.log(aimList);
   createListItem();
-  document.getElementById("titleOfAim").value = " ";
-  document.getElementById("descriptionOfAim").value = " ";
+  document.getElementById("titleOfAim").value = "";
+  document.getElementById("descriptionOfAim").value = "";
 }
 
 function remove(position) {
@@ -117,6 +118,13 @@ function remove(position) {
 function add(position) {
   aimList[position].activeAim = true;
   console.log(aimList);
+  createListItem();
+}
+
+function sortList() {
+  aimList.sort((a, b) =>
+    a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
+  );
   createListItem();
 }
 
