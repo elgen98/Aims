@@ -12,9 +12,18 @@ window.onload = function () {
     .addEventListener("click", deleteModal);
   document.getElementById("approveBtn").addEventListener("click", addObject);
   document.getElementById("sortBtn").addEventListener("click", sortList);
+  document
+    .getElementById("clearBtn")
+    .addEventListener("click", clearLocalStorage);
+  checkLocalStorage();
+  createListItem();
 };
 
 let aimList = [];
+
+function checkLocalStorage() {
+  aimList = JSON.parse(localStorage.getItem("storedAims")) || [];
+}
 
 const title = document.getElementById("titleOfAim");
 const description = document.getElementById("descriptionOfAim");
@@ -103,7 +112,11 @@ function addObject() {
     description: description.value,
     activeAim,
   });
-  console.log(aimList);
+
+  let storeAims = JSON.stringify(aimList);
+  localStorage.setItem("storedAims", storeAims);
+  console.log(JSON.parse(localStorage["storedAims"]));
+
   createListItem();
   document.getElementById("titleOfAim").value = "";
   document.getElementById("descriptionOfAim").value = "";
@@ -111,12 +124,16 @@ function addObject() {
 
 function remove(position) {
   aimList[position].activeAim = false;
+  let storeAims = JSON.stringify(aimList);
+  localStorage.setItem("storedAims", storeAims);
   console.log(aimList);
   createListItem();
 }
 
 function add(position) {
   aimList[position].activeAim = true;
+  let storeAims = JSON.stringify(aimList);
+  localStorage.setItem("storedAims", storeAims);
   console.log(aimList);
   createListItem();
 }
@@ -126,6 +143,11 @@ function sortList() {
     a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
   );
   createListItem();
+}
+
+function clearLocalStorage() {
+  localStorage.clear();
+  window.location.reload();
 }
 
 let modal = document.getElementById("myModal");
