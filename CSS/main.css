@@ -108,6 +108,19 @@
   grid-row-end: rowLine2;
 }
 
+/*.header {
+  grid-column-start: first;
+  grid-column-end: end;
+  grid-row-start: firstrow;
+  grid-row-end: rowLine2;
+}*/
+#clearBtn {
+  grid-column-start: line3;
+  grid-column-end: end;
+  grid-row-start: firstrow;
+  grid-row-end: rowLine2;
+}
+
 * {
   box-sizing: border-box;
 }
