@@ -40,18 +40,23 @@
                   name="title"
                   id="titleOfAim"
                   placeholder="Title..."
+                  maxlength="25"
                 />
-                <label>Describe the aim (if necessery)</label>
+                <label>Short description of the Aim (if necessery)</label>
                 <textarea
                   name="description"
                   id="descriptionOfAim"
                   cols="30"
                   rows="10"
+                  maxlength="25"
+                  placeholder="25 characters max"
                 ></textarea>
               </form>
             </div>
             <div class="modal-footer">
-              <button id="approveBtn">Submit</button>
+              <button id="approveBtn">
+                <i class="fas fa-plus-circle fa-2x"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -59,7 +64,7 @@
       <footer class="footer">
         <p>//stats here</p>
       </footer>
-      <button id="createBtn">Skapa nytt inlägg</button>
+      <button id="createBtn"><i class="fas fa-feather-alt fa-2x"></i></button>
     </div>
 
     <script src="JS/main.js"></script>

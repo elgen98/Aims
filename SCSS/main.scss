@@ -9,14 +9,20 @@ html {
   background-color: lightgrey;
 }
 
+button {
+  border-radius: 50%;
+  color: yellowgreen;
+  background-color: rgb(29, 165, 97);
+}
+
 .checkBtn {
+  color: black;
   background-color: red;
-  border-radius: 50px;
 }
 
 .uncheckBtn {
+  color: black;
   background-color: green;
-  border-radius: 50px;
 }
 
 img {

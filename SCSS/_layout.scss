@@ -4,6 +4,7 @@
   grid-template-rows: [firstrow] 60px [rowLine2] 1fr [rowLine3] 60px [rowEnd];
   width: 100vw;
   height: 100vh;
+  padding: 50px;
 }
 
 .mainContent {
@@ -50,4 +51,11 @@
   grid-column-end: end;
   grid-row-start: firstrow;
   grid-row-end: rowLine2;
+}
+
+@media screen and (min-width: 768px) {
+  .gridContainer {
+    grid-template-columns: [start] 35vw [first] 60px [line2] 1fr [line3] 60px [end] 35vw [bigend];
+    //grid-template-rows: [rowstart] 25vh [firstrow] 60px [rowLine2] 1fr [rowLine3] 60px [rowEnd] 25 ;
+  }
 }

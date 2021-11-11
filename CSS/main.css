@@ -40,10 +40,7 @@
   background-color: #5cb85c;
   color: white;
 }
-.modal .modal-content .modal-footer .cancelBtn {
-  float: left;
-}
-.modal .modal-content .modal-footer .approveBtn {
+.modal .modal-content .modal-footer #approveBtn {
   float: right;
 }
 .modal .modal-content .close {
@@ -75,6 +72,7 @@
   grid-template-rows: [firstrow] 60px [rowLine2] 1fr [rowLine3] 60px [rowEnd];
   width: 100vw;
   height: 100vh;
+  padding: 50px;
 }
 
 .mainContent {
@@ -121,6 +119,11 @@
   grid-row-end: rowLine2;
 }
 
+@media screen and (min-width: 768px) {
+  .gridContainer {
+    grid-template-columns: [start] 35vw [first] 60px [line2] 1fr [line3] 60px [end] 35vw [bigend];
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -187,14 +190,20 @@ html {
   background-color: lightgrey;
 }
 
+button {
+  border-radius: 50%;
+  color: yellowgreen;
+  background-color: #1da561;
+}
+
 .checkBtn {
+  color: black;
   background-color: red;
-  border-radius: 50px;
 }
 
 .uncheckBtn {
+  color: black;
   background-color: green;
-  border-radius: 50px;
 }
 
 img {
