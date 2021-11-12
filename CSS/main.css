@@ -44,9 +44,9 @@
   float: right;
 }
 .modal .modal-content .close {
-  color: #aaa;
+  color: red;
   float: right;
-  font-size: 28px;
+  font-size: 50px;
   font-weight: bold;
 }
 .modal .modal-content .close:hover,
@@ -85,13 +85,6 @@
   grid-row-end: rowLine3;
 }
 
-.footer {
-  grid-column-start: first;
-  grid-column-end: line3;
-  grid-row-start: rowLine3;
-  grid-row-end: rowEnd;
-}
-
 #createBtn {
   grid-column-start: line3;
   grid-column-end: end;
@@ -106,12 +99,6 @@
   grid-row-end: rowLine2;
 }
 
-/*.header {
-  grid-column-start: first;
-  grid-column-end: end;
-  grid-row-start: firstrow;
-  grid-row-end: rowLine2;
-}*/
 #clearBtn {
   grid-column-start: line3;
   grid-column-end: end;
@@ -131,8 +118,11 @@
 .aimSlider {
   width: 300px;
   overflow: hidden;
+  text-align: center;
 }
 .aimSlider .aimSlides {
+  background-color: yellowgreen;
+  border-radius: 10px;
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -147,12 +137,11 @@
   background: transparent;
 }
 .aimSlider .aimSlides > section {
+  text-align: start;
   scroll-snap-align: start;
   flex-shrink: 0;
   width: 300px;
-  height: 450px;
-  border-radius: 10px;
-  background: yellowgreen;
+  height: 300px;
   transform-origin: center center;
   transform: scale(1);
   transition: transform 0.5s;
@@ -199,11 +188,13 @@ button {
 .checkBtn {
   color: black;
   background-color: red;
+  margin-left: 100px;
 }
 
 .uncheckBtn {
   color: black;
   background-color: green;
+  margin-left: 100px;
 }
 
 img {

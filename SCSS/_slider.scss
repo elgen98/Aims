@@ -4,10 +4,13 @@
 
 .aimSlider {
   width: 300px;
-  //text-align: center;
   overflow: hidden;
+  text-align: center;
 
   .aimSlides {
+    background-color: yellowgreen;
+    border-radius: 10px;
+
     display: flex;
 
     overflow-x: auto;
@@ -24,12 +27,11 @@
     background: transparent;
   }
   .aimSlides > section {
+    text-align: start;
     scroll-snap-align: start;
     flex-shrink: 0;
     width: 300px;
-    height: 450px;
-    border-radius: 10px;
-    background: yellowgreen;
+    height: 300px;
     transform-origin: center center;
     transform: scale(1);
     transition: transform 0.5s;

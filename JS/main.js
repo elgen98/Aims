@@ -1,10 +1,3 @@
-/*class Aims {
-  constructor(aimTitle, aimDescription) {
-    this.title = aimTitle;
-    this.description = aimDescription;
-  }
-}*/
-
 window.onload = function () {
   document.getElementById("createBtn").addEventListener("click", showModal);
   document
